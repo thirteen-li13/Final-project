@@ -1,3 +1,3 @@
 # Repository for final project
-Final-project
-https://github.com/thirteen-li13/Final-project.git
+Project name: Final Project
+Repository name: https://github.com/thirteen-li13/oaqjp-final-project-emb-ai.git
