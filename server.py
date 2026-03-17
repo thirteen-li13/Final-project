@@ -23,10 +23,14 @@ def emo_detector():
     # Store the incoming text to a variable text_to_analyze
     text_to_analyze = request.args.get('textToAnalyze')
 
+    # For invalid input: Check if text is a non-empty string
+    if text_to_analyze is None or text_to_analyze.strip() == '' or text_to_analyze.isdigit():
+        return 'Invalid text! Please try again!'
+
     # Call sentiment_analyzer application with text_to_analyze as the argument
     response = emotion_detector(text_to_analyze)
 
-    # For valid input
+    # Return formatted string
     return f"For the given statement, the system response is "\
            f"'anger': {response['anger']}, "\
            f"'disgust': {response['disgust']}, "\
